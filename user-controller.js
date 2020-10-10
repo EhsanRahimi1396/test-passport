@@ -40,9 +40,9 @@ module.exports.deleteUser = async (req, res, next) => {
     let { id } = req.params;
     let user = await userService.deleteUser(id);
 
-    req.status = 200; 
-    req.data = user ? user : [];
-    req.error = null;
+    req.status = 200; // this line explain to me
+    req.data = user ? user : [];//this line explain to me
+    req.error = null; // chera null estefadeh kardeh??
     console.log('user deleted');
     next();
 };
